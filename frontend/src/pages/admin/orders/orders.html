@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedidos - Admin</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+
+  <header class="store-header">
+    <h1>🍔 Food Store — Admin</h1>
+    <button id="logout-btn" class="btn-logout">Salir</button>
+  </header>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <nav>
+        <ul>
+          <li><a href="../home/home.html">📊 Dashboard</a></li>
+          <li><a href="../categories/categories.html">🗂 Categorías</a></li>
+          <li><a href="../products/products.html">🍔 Productos</a></li>
+          <li><a href="./orders.html" class="active">📦 Pedidos</a></li>
+          <li><a href="/src/pages/store/home/home.html">🛒 Ver Tienda</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-section-header">
+        <h2>Gestión de Pedidos</h2>
+        <select id="filtro-estado">
+          <option value="TODOS">Todos los pedidos</option>
+          <option value="PENDIENTE">Pendiente</option>
+          <option value="CONFIRMADO">Confirmado</option>
+          <option value="TERMINADO">Terminado</option>
+          <option value="CANCELADO">Cancelado</option>
+        </select>
+      </div>
+
+      <div id="orders-list"></div>
+
+      <div id="empty-msg" style="display:none;">
+        <p>No hay pedidos todavía.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal detalle -->
+  <div id="modal" style="display:none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-card">
+      <h2>Detalle del Pedido</h2>
+      <div id="order-detail"></div>
+
+      <div class="form-group">
+        <label for="nuevo-estado">Cambiar estado</label>
+        <select id="nuevo-estado">
+          <option value="PENDIENTE">Pendiente</option>
+          <option value="CONFIRMADO">Confirmado</option>
+          <option value="TERMINADO">Terminado</option>
+          <option value="CANCELADO">Cancelado</option>
+        </select>
+      </div>
+
+      <div class="modal-actions">
+        <button id="btn-cerrar" class="btn-secondary">Cerrar</button>
+        <button id="btn-actualizar" class="btn-primary">Actualizar Estado</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./orders.ts"></script>
+</body>
+</html>

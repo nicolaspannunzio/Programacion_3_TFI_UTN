@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin - Food Store</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+
+  <header class="store-header">
+    <h1>🍔 Food Store — Admin</h1>
+    <button id="logout-btn" class="btn-logout">Salir</button>
+  </header>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <nav>
+        <ul>
+          <li><a href="./home.html" class="active">📊 Dashboard</a></li>
+          <li><a href="../categories/categories.html">🗂 Categorías</a></li>
+          <li><a href="../products/products.html">🍔 Productos</a></li>
+          <li><a href="../orders/orders.html">📦 Pedidos</a></li>
+          <li><a href="/src/pages/store/home/home.html">🛒 Ver Tienda</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <h2>Dashboard</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Categorías</h3>
+          <p id="total-categorias">...</p>
+        </div>
+        <div class="stat-card">
+          <h3>Productos</h3>
+          <p id="total-productos">...</p>
+        </div>
+        <div class="stat-card">
+          <h3>Pedidos</h3>
+          <p id="total-pedidos">...</p>
+        </div>
+        <div class="stat-card">
+          <h3>Disponibles</h3>
+          <p id="total-disponibles">...</p>
+        </div>
+      </div>
+
+      <div class="admin-links">
+        <a href="../categories/categories.html" class="btn-primary">Gestionar Categorías</a>
+        <a href="../products/products.html" class="btn-primary">Gestionar Productos</a>
+        <a href="../orders/orders.html" class="btn-primary">Gestionar Pedidos</a>
+      </div>
+
+    </main>
+  </div>
+
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store - Carrito</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body>
+    <header class="store-header">
+      <h1>🛒 Mi Carrito</h1>
+      <a href="../home/home.html">← Seguir comprando</a>
+    </header>
+
+    <div class="cart-container">
+
+      <div id="cart-list"></div>
+
+      <div id="empty-msg" style="display: none;">
+        <p>Tu carrito está vacío 🛒</p>
+        <a href="../home/home.html">Ver catálogo</a>
+      </div>
+
+      <div id="cart-footer" style="display: none;">
+        <div class="cart-summary">
+          <span class="total-label">Total:</span>
+          <span class="total-amount" id="cart-total">$0</span>
+        </div>
+        <div class="cart-actions">
+          <button id="btn-clear" class="btn-secondary">🗑 Vaciar carrito</button>
+          <button id="btn-checkout" class="btn-primary">Proceder al Pago</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal de checkout -->
+    <div id="checkout-modal" style="display: none;">
+      <div class="modal-overlay"></div>
+      <div class="modal-card">
+        <h2>Completar Pedido</h2>
+
+        <form id="checkout-form">
+
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" placeholder="Ej: 3415001234" required />
+          </div>
+
+          <div class="form-group">
+            <label for="forma-pago">Método de Pago</label>
+            <select id="forma-pago" required>
+              <option value="" disabled selected>Seleccioná un método</option>
+              <option value="EFECTIVO">Efectivo</option>
+              <option value="TARJETA">Tarjeta</option>
+              <option value="TRANSFERENCIA">Transferencia</option>
+            </select>
+          </div>
+
+          <p id="checkout-error" class="error-msg" style="display: none;"></p>
+
+          <div class="modal-total">
+            <span>Total a pagar:</span>
+            <strong id="modal-total">$0</strong>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" id="btn-cancel-modal" class="btn-secondary">Cancelar</button>
+            <button type="submit" class="btn-primary">Confirmar Pedido</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./cart.ts"></script>
+  </body>
+</html>

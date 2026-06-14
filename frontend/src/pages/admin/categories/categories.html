@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categorías - Admin</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+
+  <header class="store-header">
+    <h1>🍔 Food Store — Admin</h1>
+    <button id="logout-btn" class="btn-logout">Salir</button>
+  </header>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <nav>
+        <ul>
+          <li><a href="../home/home.html">📊 Dashboard</a></li>
+          <li><a href="./categories.html" class="active">🗂 Categorías</a></li>
+          <li><a href="../products/products.html">🍔 Productos</a></li>
+          <li><a href="../orders/orders.html">📦 Pedidos</a></li>
+          <li><a href="/src/pages/store/home/home.html">🛒 Ver Tienda</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-section-header">
+        <h2>Gestión de Categorías</h2>
+        <button id="btn-nueva" class="btn-primary">+ Nueva Categoría</button>
+      </div>
+
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="categorias-tbody"></tbody>
+      </table>
+
+      <div id="empty-msg" style="display:none;">
+        <p>No hay categorías cargadas todavía.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal crear/editar -->
+  <div id="modal" style="display:none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-card">
+      <h2 id="modal-title">Nueva Categoría</h2>
+      <form id="categoria-form">
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required />
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" rows="3"></textarea>
+        </div>
+
+        <p id="form-error" class="error-msg" style="display:none;"></p>
+
+        <div class="modal-actions">
+          <button type="button" id="btn-cancelar" class="btn-secondary">Cancelar</button>
+          <button type="submit" class="btn-primary">Guardar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./categories.ts"></script>
+</body>
+</html>

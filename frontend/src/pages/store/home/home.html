@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo - Food Store</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  <header class="store-header">
+    <h1>Food Store</h1>
+    <div>
+      <a href="../cart/cart.html">
+        Carrito <span id="cart-count">0</span>
+      </a>
+      <button id="logout-btn" class="btn-logout" style="margin-left: 10px;">Salir</button>
+    </div>
+  </header>
+
+  <div class="store-layout">
+    <aside class="store-sidebar">
+      <h2>Categorías</h2>
+      <ul id="category-list">
+        <li class="active" data-id="all">Todas</li>
+      </ul>
+    </aside>
+
+    <main class="store-main">
+      <input type="text" id="search-bar" placeholder="Buscar productos por nombre..." />
+      
+      <div id="product-grid">
+        </div>
+      
+      <div id="no-results">No se encontraron productos que coincidan con tu búsqueda.</div>
+    </main>
+  </div>
+
+  <footer>
+    <p>Food Store - Evaluación Parcial</p>
+  </footer>
+
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>
