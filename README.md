@@ -18,7 +18,7 @@ navegar productos, armar un carrito y realizar compras.
 
 ### Backend
 - Java 17+
-- Spring Boot 3.x
+- Spring Boot 3.4.5
 - Spring Data JPA / Hibernate
 - PostgreSQL
 - Lombok
@@ -35,34 +35,33 @@ navegar productos, armar un carrito y realizar compras.
 
 ## 📁 Estructura del proyecto
 
+```text
 TFI-FoodStore/
-├── README.md
 ├── backend/
-│   ├── src/
-│   │   └── main/
-│   │       └── java/pedidos/
-│   │           ├── config/
-│   │           ├── controllers/
-│   │           ├── dtos/
-│   │           ├── entidades/
-│   │           ├── enums/
-│   │           ├── exceptions/
-│   │           ├── repositories/
-│   │           └── services/
-│   └── resources/
+│   ├── src/main/java/pedidos/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── dtos/
+│   │   ├── entidades/
+│   │   ├── enums/
+│   │   ├── exceptions/
+│   │   ├── repositories/
+│   │   └── services/
+│   └── src/main/resources/
 │       └── application.properties
+├── frontend/
+│   ├── src/
+│   │   ├── css/
+│   │   ├── pages/
+│   │   │   ├── admin/
+│   │   │   ├── auth/
+│   │   │   ├── client/
+│   │   │   └── store/
+│   │   ├── types/
+│   │   └── utils/
+│   └── index.html
 ├── build.gradle
-└── frontend/
-    ├── src/
-    │   ├── css/
-    │   ├── pages/
-    │   │   ├── admin/
-    │   │   ├── auth/
-    │   │   ├── client/
-    │   │   └── store/
-    │   ├── types/
-    │   └── utils/
-    └── index.html
+└── README.md
 
 ---
 ## ⚙️ Requisitos previos
@@ -160,13 +159,12 @@ http://localhost:8080/swagger-ui/index.html
 
 ## 🎥 Video demostración
 
-👉 [Ver video en YouTube/Drive](URL_DEL_VIDEO)
+👉 [Drive](https://drive.google.com/drive/folders/1l4eFkg1P3TOgYG9FCds0FD9-IniPT5E8)
 
 ---
-
 ## 📄 Documentación PDF
 
-👉 [Ver documentación](URL_DEL_PDF)
+👉 [Descargar informe](InformeFinal-Pannunzio_Nicolas.pdf)
 
 ---
 
