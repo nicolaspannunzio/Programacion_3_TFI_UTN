@@ -47,8 +47,10 @@ TFI-FoodStore/
 │   │   ├── exceptions/
 │   │   ├── repositories/
 │   │   └── services/
-│   └── src/main/resources/
-│       └── application.properties
+│   ├── src/main/resources/
+│   │   └── application.properties
+│   └── src/test/java/pedidos/
+│       └── Tests unitarios e integración
 ├── frontend/
 │   ├── src/
 │   │   ├── css/
